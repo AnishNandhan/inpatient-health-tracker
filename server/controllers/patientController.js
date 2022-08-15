@@ -17,7 +17,7 @@ const create_patient = async (req, res) => {
 
 // get all patients
 const get_patients = async (req, res) => {
-  const patients = await Patient.find();
+  const patients = await Patient.find().sort({createdAt: -1});
   res.status(200).json(patients);
 }
 
