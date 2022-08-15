@@ -1,0 +1,7 @@
+/server/node_modules
+
+/client/update/node_modules
+
+/server/.env
+
+/server/post.txt

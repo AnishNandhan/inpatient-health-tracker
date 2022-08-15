@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  display: flex;
+  padding: 1em 4em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Form */
+.update-form {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+
+.update-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-form h1 {
+  font-size: 36px;
+}
+
+.update-form label {
+  margin-left: 0.5em;
+  margin-bottom: 0.2em;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.update-form input {
+  margin-left: 0.5em;
+  width: 40%;
+  font-size: 24px;
+  margin-bottom: 2em;
+}
+
+.update-form button {
+  margin: 0 auto;
+}
+
+.gender {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.gender div {
+  display: flex;
+}
+
+.patient-list {
+  padding: 1em 10em;
+}
+
+.patient {
+  background-color: white;
+  padding: 1em;
+  margin: 1.5em;
+}
+
+.patient h3 {
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 490px) {
+  .update-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
