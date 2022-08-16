@@ -6,12 +6,22 @@ body {
   margin: 0;
 }
 
+h1, h2, h3, h4, a, p {
+  padding: 0;
+  margin: 0;
+}
+
 /* Navbar */
 .navbar {
   background-color: white;
   display: flex;
-  padding: 1em 4em;
+  justify-content: space-between;
+  padding: 0.7em 4em;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-heading {
+  flex: 1;
 }
 
 .navbar a {
@@ -19,38 +29,51 @@ body {
   color: #333;
 }
 
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+}
+
+.navbar li {
+  list-style-type: none;
+  font-size: 20px;
+}
+
 /* Form */
-.update-form {
+.patient-form {
   max-width: 1400px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
 }
 
-.update-form div {
+.patient-form div {
   display: flex;
   flex-direction: column;
 }
 
-.update-form h1 {
+.patient-form h1 {
   font-size: 36px;
 }
 
-.update-form label {
+.patient-form label {
   margin-left: 0.5em;
   margin-bottom: 0.2em;
   font-weight: 500;
   font-size: 24px;
 }
 
-.update-form input {
+.patient-form input {
   margin-left: 0.5em;
   width: 40%;
   font-size: 24px;
   margin-bottom: 2em;
 }
 
-.update-form button {
+.patient-form button {
   margin: 0 auto;
 }
 
@@ -63,18 +86,43 @@ body {
   display: flex;
 }
 
+.view-form input {
+  pointer-events: none;
+  color: grey;
+}
+
+/* Patient List Page */
+
 .patient-list {
   padding: 1em 10em;
 }
 
 .patient {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
-  padding: 1em;
+  padding: 1em 4em;
   margin: 1.5em;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.patient:hover {
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
 }
 
 .patient h3 {
   text-transform: capitalize;
+}
+
+.patient-short-details {
+  flex: 5;
+}
+
+.p-btns {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 490px) {

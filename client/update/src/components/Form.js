@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 
 const Form = () => {
+
+  const [patient, setPatient] = useState({});
+  
+  const params = useParams();
+  const id = params.id;
+
+  useEffect(() => {
+    const fetchPatient = async () => {
+      const response = await fetch(`/api/patients/${id}`);
+      const json = await response.json();
+
+      if (response.ok) {
+        console.log(json)
+        setPatient(json);
+      }
+    }
+
+    fetchPatient();
+  }, [])
+
   return (
     <>
       <h1>Update Patient Details</h1>
-      <form className='update-form'>
+      <form className='update-form patient-form'>
 
         <div>
           <label>Name: </label>
-          <input type='text' required/>
+          <input type='text' value={patient.name} required/>
         </div>
 
         <div>
@@ -95,13 +116,8 @@ const Form = () => {
           <label>Drain (in ml): </label>
           <input type='number' required/>
         </div>
-
-        <div>
-          <label>Doctor's orders: </label>
-          <textarea></textarea>
-        </div>
  
-        <button>Save Changes</button>
+        <button>Save</button>
       </form>
     </>
   )

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { PatientContext } from '../contexts/PatientContext'
 
 const PatientList = () => {
     const [patients, setPatients] = useState([]);
@@ -27,7 +28,12 @@ const PatientList = () => {
                     <p>Gender: {patient.gender}</p>
                     <p>Date of Admission: {patient.createdAt}</p>
                 </div>
-                <Link to={patient._id} state={{ id: patient._id }}><button>View Details</button></Link>
+                <div className='p-btns'>
+                    <PatientContext.Provider>
+                        <Link to={`/patients/${patient._id}`}><button>View Details</button></Link>
+                    </PatientContext.Provider>
+                    <button>Delete</button>
+                </div>
             </div>
         ))}
     </div>
