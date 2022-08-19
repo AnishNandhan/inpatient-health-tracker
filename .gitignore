@@ -3,3 +3,5 @@
 /client/update/node_modules
 
 /server/post.txt
+
+/server/.env
