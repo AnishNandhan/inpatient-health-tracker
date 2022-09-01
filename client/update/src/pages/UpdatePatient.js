@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import Form from '../components/Form'
+import UpdateForm from '../components/UpdateForm'
 import { UserContext } from '../contexts/UserContext'
 
 const UpdatePatient = () => {
@@ -11,7 +11,7 @@ const UpdatePatient = () => {
     <div className='update-patient container'>
         <h1>Update Patient Details</h1>
         <UserContext.Provider value={user}>
-            <Form />
+            <UpdateForm />
         </UserContext.Provider>
     </div>
   )

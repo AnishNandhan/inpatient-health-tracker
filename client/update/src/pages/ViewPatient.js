@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import Form from '../components/Form'
+import UpdateForm from '../components/UpdateForm'
 import { UserContext } from '../contexts/UserContext'
 
 const ViewPatient = () => {
@@ -10,7 +10,7 @@ const ViewPatient = () => {
     return (
         <div className='-view-patient'>
             <UserContext.Provider value={user}>
-                <Form />
+                <UpdateForm />
             </UserContext.Provider>
         </div>
     )
