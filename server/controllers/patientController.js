@@ -1,4 +1,4 @@
-const Patient = require('../models/PatientModel');
+const User = require('../models/PatientModel');
 const mongoose = require('mongoose');
 
 // create patient details
